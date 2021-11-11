@@ -2,7 +2,9 @@ const startQuizBtn = document.querySelector(".btn button");
 const rules = document.querySelector('.rulesBox');
 const exitBtn = document.querySelector(".exitBtn");
 const continueBtn = document.querySelector(".continueBtn");
-const questions = document.querySelector(".questions");
+const ques = document.querySelector(".questions");
+
+const nextBtn = document.querySelector(".nextBtn");
 
 startQuizBtn.onclick = () => {
     rules.classList.add("activeInfo");
@@ -15,5 +17,32 @@ exitBtn.onclick = () => {
 
 continueBtn.onclick = () => {
     rules.classList.remove("activeInfo");
-    questions.classList.add("activeInfo");
+    ques.classList.add("activeInfo");
+    showQuestion(0);
+}
+
+
+function showQuestion(index) {
+    const questionText = document.querySelector(".questionText");
+    const allOptions = document.querySelector(".allOptions");
+
+    let optionTag = '<div class="options">' + questions[index].options[0] + "</div>"
+                   +'<div class="options">' + questions[index].options[1] + "</div>"
+                   +'<div class="options">' + questions[index].options[2] + "</div>"
+                   +'<div class="options">' + questions[index].options[3] + "</div>"
+    let quesTag = "<span>" + questions[index].num + ". " + questions[index].question + "</span>";
+
+    questionText.innerHTML = quesTag;
+    allOptions.innerHTML = optionTag;
+    console.log(optionTag);
+}
+
+let queCount = 0;
+nextBtn.onclick = () => {
+    if (queCount < questions.length - 1) {
+        queCount++;
+        showQuestion(queCount);
+    } else {
+        document.write("<h1>Quiz Completed</h1>");
+    }
 }
