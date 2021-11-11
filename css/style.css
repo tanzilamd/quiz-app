@@ -32,6 +32,11 @@ body .quizApp .text {
   margin: 0 auto;
 }
 
+body .quizApp .text P {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
 body .quizApp .text h3 {
   margin-top: 20px;
 }
@@ -61,6 +66,12 @@ body .quizApp .btn button:hover {
   color: white;
 }
 
+body .rulesBox.activeInfo {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+}
+
 body .rulesBox {
   width: 320px;
   height: 580px;
@@ -73,6 +84,8 @@ body .rulesBox {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 30px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 body .rulesBox .rulesList {
@@ -134,6 +147,156 @@ body .rulesBox .rulesBtn .continueBtn {
 }
 
 body .rulesBox .rulesBtn .continueBtn:hover {
+  background-color: #2F2E41;
+  color: white;
+}
+
+body .questions {
+  width: 320px;
+  height: 580px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+
+body .questions .questionHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  height: 70px;
+}
+
+body .questions .questionHeader .title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body .questions .questionHeader .timeCount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #cce5ff;
+  background-color: #cce5ff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+body .questions .questionHeader .timeCount .seconds {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #2F2E41;
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+body .questions .questionSection {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+body .questions .questionSection .questionText {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+body .questions .questionSection .allOptions {
+  padding: 20px 0;
+  display: block;
+}
+
+body .questions .questionSection .allOptions .options {
+  background-color: aliceblue;
+  border: 1px solid #84c5fe;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .questions .questionSection .allOptions .options:hover {
+  background-color: #cce5ff;
+  color: #004085;
+  border: 1px solid #b8daff;
+}
+
+body .questions .questionSection .allOptions .options span {
+  font-size: 14px;
+}
+
+body .questions footer {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #2F2E41;
+  margin-top: 45px;
+}
+
+body .questions footer .totalQue {
+  font-weight: 500;
+  position: absolute;
+  bottom: 15px;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+body .questions footer button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #00BFA6;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 30px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+body .questions footer button:hover {
   background-color: #2F2E41;
   color: white;
 }
