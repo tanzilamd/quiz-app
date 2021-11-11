@@ -1,6 +1,8 @@
 const startQuizBtn = document.querySelector(".btn button");
 const rules = document.querySelector('.rulesBox');
 const exitBtn = document.querySelector(".exitBtn");
+const continueBtn = document.querySelector(".continueBtn");
+const questions = document.querySelector(".questions");
 
 startQuizBtn.onclick = () => {
     rules.classList.add("activeInfo");
@@ -9,4 +11,9 @@ startQuizBtn.onclick = () => {
 
 exitBtn.onclick = () => {
     rules.classList.remove("activeInfo");
+}
+
+continueBtn.onclick = () => {
+    rules.classList.remove("activeInfo");
+    questions.classList.add("activeInfo");
 }

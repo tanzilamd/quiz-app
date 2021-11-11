@@ -153,6 +153,12 @@ body .rulesBox .rulesBtn .continueBtn:hover {
   color: white;
 }
 
+body .questions.activeInfo {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+}
+
 body .questions {
   width: 320px;
   height: 580px;
@@ -165,6 +171,8 @@ body .questions {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 30px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 body .questions .questionHeader {

@@ -145,6 +145,12 @@ body {
     }
     
 
+
+    .questions.activeInfo {
+        opacity: 1;
+        z-index: 5;
+        pointer-events: auto;
+    }
     .questions {
         width: 320px;
         height: 580px;
@@ -155,6 +161,8 @@ body {
         box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.3);
         transform: translate(-50%, -50%);
         border-radius: 30px;
+        opacity: 0;
+        pointer-events: none;
 
         .questionHeader {
             display: flex;
