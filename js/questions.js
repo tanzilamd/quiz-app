@@ -43,7 +43,8 @@ let questions = [
             "Hyper Tool Multi Language"
         ]
     },
-    {
+    {   
+        num: 5,
         question: "What does CSS stand for?",
         answer: "Cascading Style Sheets",
         options: [

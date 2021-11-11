@@ -5,6 +5,7 @@ const continueBtn = document.querySelector(".continueBtn");
 const ques = document.querySelector(".questions");
 
 const nextBtn = document.querySelector(".nextBtn");
+const totalQue = document.querySelector(".totalQue");
 
 startQuizBtn.onclick = () => {
     rules.classList.add("activeInfo");
@@ -35,7 +36,12 @@ function showQuestion(index) {
     questionText.innerHTML = quesTag;
     allOptions.innerHTML = optionTag;
     console.log(optionTag);
+
+    let totalQuesTag = `<p>${questions[index].num} of 5 questions</p>`;
+    totalQue.innerHTML = totalQuesTag;
 }
+
+
 
 let queCount = 0;
 nextBtn.onclick = () => {
